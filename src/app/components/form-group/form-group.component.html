@@ -1,0 +1,49 @@
+<mat-grid-list cols="2" rowHeight="2:1" layout-margin>
+    <mat-card-content class="container">
+        <form class="my-form" [formGroup]="form" >
+           <mat-form-field class="full-width container" >
+                  <mat-label>First Name</mat-label>
+                  <input  matInput formControlName="Name" placeholder="First name"    required>
+               </mat-form-field>
+               <mat-form-field class="full-width container">
+                  <mat-label>Last Name</mat-label>
+                  <input  matInput formControlName="lastName" placeholder="Last Name"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width container">
+                  <mat-label>Address</mat-label>
+                  <input  matInput  formControlName="Address" placeholder="Address"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width container">
+                  <mat-label>Email</mat-label>
+                  <input  matInput  formControlName="Email" placeholder="Email" >
+               </mat-form-field>
+               <mat-form-field class="full-width container">
+                  <mat-label>Password</mat-label>
+                  <input  matInput formControlName="Password"  placeholder="password">
+               </mat-form-field>
+               <button mat-raised-button color="primary" class="container"  (click)="addNew()" type="submit">Salvar</button>
+               <button mat-raised-button color="primary" class="hidden"  (click)="confirmUpdate()" type="submit" style="display:none">Alterar</button>
+        </form>
+      </mat-card-content>
+  </mat-grid-list>
+
+  <mat-card class="example-card" *ngIf="dados">
+   
+   <mat-card-title>{{dados.Email}}</mat-card-title>
+   <mat-card-subtitle>{{dados.Address}}</mat-card-subtitle>
+   <mat-card-content>
+    
+     <p >{{dados.lastName}}</p>
+   </mat-card-content>
+ 
+ </mat-card>
+
+ <div>
+   <app-person 
+   *ngFor="let p of people$ | async"
+   [person]="p"
+   (delete)="delete($event)"
+   (update)="update($event)">
+   
+</app-person>
+ </div>

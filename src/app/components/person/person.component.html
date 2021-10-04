@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" >
+  <div fxFlex="30"><h3>{{person.name}}</h3></div>
+  <div fxLayout="row" fxLayoutAlign="start center" >
+    <div> Last Name: {{person.last_name}} - Address: {{person.address}} - Email: {{person.email}} </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center" >
+    <!-- <button mat-button color="accent" (click)="update.emit(person)">Change</button> -->
+    <button mat-button color="warn" (click)="delete.emit(person)">Remove</button>
+  </div>
+</div>

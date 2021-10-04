@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    align-items: center;
+    /* background-color:white; */
+}
+.menu{
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; 
+   
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(80, 71, 71);
+}
+
+.header .logo {
+    max-height: 32px;
+}
+
+.header .title-group {
+    padding-left: 25px;
+}
+
+.header .title-group i {
+    padding-right: 5px;
+}
+.sidenav {
+    background-color:#3d46becd;
+    width: 200px;
+}
+
+.sidenav a {
+    color: #FFF;
+}
+
+.sidenav i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+    background-color: #FFF;
+}
+.footer {
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.footer > span {
+    font-size: 1.1rem;
+    font-weight: 300;
+   
+}
+ .red{
+color: red;
+ }
+
+.ml{
+    margin:3px;
+}
+.spacer {
+    flex: 1 1 auto;
+  }
