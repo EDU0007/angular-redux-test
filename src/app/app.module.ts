@@ -27,6 +27,7 @@ import { StoreModule } from '@ngrx/store';
 import { appReducers } from './components/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { PersonComponent } from './components/person/person.component'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { PersonComponent } from './components/person/person.component'
     MatMenuModule,
     MatGridListModule,
     ReactiveFormsModule,
+    MatProgressBarModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25
